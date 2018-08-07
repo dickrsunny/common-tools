@@ -23,7 +23,7 @@ def averager():  # <1>
 
 # the delegating generator
 def grouper(results, key):  # <5>
-        _i = averager()  # <1>
+        _i = iter(averager())  # <1>
         try:
             _y = next(_i)  # <2>
         except StopIteration as _e:
